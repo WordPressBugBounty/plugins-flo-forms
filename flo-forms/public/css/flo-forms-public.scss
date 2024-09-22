@@ -1,0 +1,871 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.display-none {
+	display: none;
+}
+
+.flo-form {
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+
+	.flohp {
+		display: none !important;
+	}
+	.clear {
+		clear: both;
+	}
+	.flo-response {
+		padding-top: 30px;
+		text-align: center;
+		font-size: 24px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		&-error {
+			color: red;
+		}
+	}
+	.flo.overlay-loader {
+		display: none;
+		margin: auto;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.loader {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 25px;
+		height: 25px;
+		animation-name: rotateAnim;
+		-o-animation-name: rotateAnim;
+		-ms-animation-name: rotateAnim;
+		-webkit-animation-name: rotateAnim;
+		-moz-animation-name: rotateAnim;
+		animation-duration: 0.72s;
+		-o-animation-duration: 0.72s;
+		-ms-animation-duration: 0.72s;
+		-webkit-animation-duration: 0.72s;
+		-moz-animation-duration: 0.72s;
+		animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		-o-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+	}
+	.loader div {
+		width: 2px;
+		height: 2px;
+		border-radius: 50%;
+		border: 0px solid rgb(0, 0, 0);
+		position: absolute;
+		top: 0px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	.loader div:nth-child(odd) {
+		border-top: none;
+		border-left: none;
+	}
+	.loader div:nth-child(even) {
+		border-bottom: none;
+		border-right: none;
+	}
+	.loader div:nth-child(2) {
+		border-width: 0px;
+		left: 0px;
+		top: -1px;
+		width: 3px;
+		height: 3px;
+	}
+	.loader div:nth-child(3) {
+		border-width: 0px;
+		left: -0px;
+		top: 1px;
+		width: 4px;
+		height: 4px;
+	}
+	.loader div:nth-child(4) {
+		border-width: 1px;
+		left: -0px;
+		top: -1px;
+		width: 6px;
+		height: 6px;
+	}
+	.loader div:nth-child(5) {
+		border-width: 1px;
+		left: -0px;
+		top: 1px;
+		width: 8px;
+		height: 8px;
+	}
+	.loader div:nth-child(6) {
+		border-width: 1px;
+		left: 0px;
+		top: -1px;
+		width: 10px;
+		height: 10px;
+	}
+	.loader div:nth-child(7) {
+		border-width: 1px;
+		left: 0px;
+		top: 1px;
+		width: 12px;
+		height: 12px;
+	}
+
+	@keyframes rotateAnim {
+		from {
+			transform: rotate(360deg);
+		}
+		to {
+			transform: rotate(0deg);
+		}
+	}
+
+	@-o-keyframes rotateAnim {
+		from {
+			-o-transform: rotate(360deg);
+		}
+		to {
+			-o-transform: rotate(0deg);
+		}
+	}
+
+	@-ms-keyframes rotateAnim {
+		from {
+			-ms-transform: rotate(360deg);
+		}
+		to {
+			-ms-transform: rotate(0deg);
+		}
+	}
+
+	@-webkit-keyframes rotateAnim {
+		from {
+			-webkit-transform: rotate(360deg);
+		}
+		to {
+			-webkit-transform: rotate(0deg);
+		}
+	}
+
+	@-moz-keyframes rotateAnim {
+		from {
+			-moz-transform: rotate(360deg);
+		}
+		to {
+			-moz-transform: rotate(0deg);
+		}
+	}
+
+	// mobile portrait styles
+	@media only screen and (min-width: 500px) {
+		.width-50 {
+			position: relative;
+			display: inline-block;
+			width: 50%;
+
+			// even element with 50% width
+			&.width-50-1 {
+				padding-right: calc(var(--data-form-padding-left) / 2);
+			}
+
+			&.width-50-2 {
+				// odd element with 50% width
+				padding-left: calc(var(--data-form-padding-right) / 2);
+			}
+		}
+		.width-33 {
+			&.width-33-1 {
+				padding-right: var(--data-form-padding-left);
+			}
+
+			&.width-33-3 {
+				padding-left: var(--data-form-padding-right);
+			}
+		}
+		.width-25 {
+			&.width-25-1 {
+				padding-right: var(--data-form-padding-left);
+			}
+
+			&.width-25-2 {
+				padding-right: calc(var(--data-form-padding-left) / 2);
+			}
+			&.width-25-3 {
+				padding-left: calc(var(--data-form-padding-right) / 2);
+			}
+
+			&.width-25-4 {
+				// odd element with 50% width
+				padding-left: var(--data-form-padding-right);
+			}
+		}
+		.width-100,
+		.width-50 {
+			padding: 3px 3px 3px 8px;
+		}
+	}
+
+	&--custom-fonts {
+		label {
+			font-family: var(--data-label-font) !important;
+			font-size: var(--data-label-font-size) !important;
+			letter-spacing: var(--data-label-letter-spacing) !important;
+			line-height: var(--data-label-line-height) !important;
+			font-style: var(--data-label-italic);
+			font-weight: var(--data-label-bold);
+			text-decoration: var(--data-label-underline);
+		}
+
+		.hint {
+			font-family: var(--data-hint-font) !important;
+			font-size: var(--data-hint-font-size) !important;
+			letter-spacing: var(--data-hint-letter-spacing) !important;
+			line-height: var(--data-hint-line-height) !important;
+			font-style: var(--data-hint-italic);
+			font-weight: var(--data-hint-bold);
+			text-decoration: var(--data-hint-underline);
+		}
+
+		input,
+		select,
+		textarea {
+			font-family: var(--data-input-font) !important;
+			font-size: var(--data-input-font-size) !important;
+			letter-spacing: var(--data-input-letter-spacing) !important;
+			line-height: var(--data-input-line-height) !important;
+			font-style: var(--data-input-italic);
+			font-weight: var(--data-input-bold);
+			text-decoration: var(--data-input-underline);
+
+			&::placeholder {
+				font-style: var(--data-input-italic);
+				font-weight: var(--data-input-bold);
+				text-decoration: var(--data-input-underline);
+			}
+		}
+
+		.field-submit input {
+			font-family: var(--data-button-font) !important;
+			font-size: var(--data-button-font-size) !important;
+			letter-spacing: var(--data-button-letter-spacing) !important;
+			line-height: var(--data-button-line-height) !important;
+			font-style: var(--data-button-italic);
+			font-weight: var(--data-button-bold);
+			text-decoration: var(--data-button-underline);
+		}
+	}
+
+	.vue-form-generator:not(.flo-form--custom-colors) {
+		@media only screen and (max-width: 667px) {
+			input[type="radio"],
+			input[type="checkbox"] {
+				all: revert;
+			}
+		}
+	}
+
+	.flo-form--custom-colors {
+		background-color: var(--data-form-bgcolor);
+
+		label {
+			color: var(--data-label-color);
+		}
+
+		input,
+		textarea,
+		select {
+			color: var(--data-input-color);
+			background-color: var(--data-inputbg-color);
+		}
+
+		.hint {
+			color: var(--data-hint-color);
+		}
+
+		/* Commented the inputs border color styles because of the issues with checkboxes and radio buttons */
+		/* Especially when those are checked  - there is incompatibility with different browsers and themes */
+
+		input,
+		textarea,
+		select {
+			border-color: var(--data-border-color);
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			border: 1px solid;
+			//background: #fff;
+			color: #555;
+			clear: none;
+			cursor: pointer;
+			display: inline-block;
+			line-height: 0;
+			height: 1em;
+			width: 1em;
+			line-height: 1.2em !important;
+			min-width: 0.8em;
+			margin-right: 4px;
+			outline: 0;
+			padding: 0 !important;
+			text-align: center;
+			vertical-align: middle;
+			-webkit-appearance: none;
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+			transition: 0.05s border-color ease-in-out;
+			color: var(--data-border-color);
+			position: relative;
+
+			&:checked:before {
+				//content: "\2022";
+				border-radius: 50px;
+				font-size: 24px;
+				line-height: 16px;
+				float: left;
+				display: inline-block;
+				vertical-align: middle;
+				font: normal 1em/1 dashicons;
+				font-family: dashicons !important;
+				speak: none;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			&:checked {
+				&:after {
+					display: none;
+				}
+			}
+		}
+
+		input[type="checkbox"] {
+			border-radius: 0px;
+
+			&:checked:before {
+				content: "\f147";
+			}
+		}
+
+		input[type="radio"] {
+			border-radius: 50%;
+
+			&:checked:before {
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				content: " ";
+				background-color: var(--data-border-color);
+				float: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="number"],
+		input[type="tel"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		input[type="checkbox"] {
+			border-color: var(--data-border-color);
+		}
+
+		hr.flo-section-break {
+			border-top: 1px solid var(--data-border-color);
+			background-color: transparent;
+			border-bottom: 0px;
+		}
+
+		::placeholder {
+			color: var(--data-placeholder-color) !important;
+		}
+	}
+
+	/* fixing moving on clicking on iPhone */
+	input[type="checkbox"]:hover,
+	input[type="radio"]:hover input[type="checkbox"]:focus,
+	input[type="radio"]:focus {
+		padding-left: 0 !important;
+	}
+}
+
+.app-flo-forms {
+	.panel-body {
+		&.response-mode {
+			opacity: 0.1;
+		}
+	}
+
+	.form-preview {
+		.vue-form-generator {
+			padding: var(--data-form-padding-top) var(--data-form-padding-right)
+				var(--data-form-padding-bottom) var(--data-form-padding-left);
+		}
+
+		@media only screen and (max-width: 499px) {
+			.vue-form-generator {
+				padding: var(--data-form-mobile_padding-top)
+					var(--data-form-mobile_padding-right)
+					var(--data-form-mobile_padding-bottom)
+					var(--data-form-mobile_padding-left);
+			}
+		}
+
+		section {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		&.two-columns {
+			.vue-form-generator {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+
+				@media only screen and (max-width: 640px) {
+					flex-direction: column;
+				}
+			}
+
+			section {
+				&.form-group-section {
+					min-height: 60px;
+					flex-basis: 48%;
+					flex-grow: 0;
+					flex-shrink: 0;
+					flex-wrap: wrap;
+					align-content: flex-start;
+				}
+
+				&.form-group-submit {
+					flex: 0 0 100%;
+					margin-top: 20px;
+					display: block;
+				}
+			}
+		}
+
+		.form-group {
+			position: relative;
+			display: flex;
+			//justify-content: space-between;
+			flex-flow: row wrap;
+			margin-bottom: 20px;
+			padding: 5px;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+			width: 100%;
+
+			&:hover {
+				.remove-field {
+					display: block;
+				}
+			}
+
+			&.flo-section-break {
+				margin-bottom: 0;
+				hr {
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+
+			&.hidden {
+				display: none;
+			}
+
+			& > label:empty {
+				display: none;
+			}
+
+			&.required {
+				color: inherit;
+
+				& > label:after {
+					content: "*";
+					font-weight: 400;
+					color: red;
+					padding-left: 0.2em;
+					font-size: 1em;
+				}
+
+				&.field-checkbox {
+					// display: flex;
+					// align-items: flex-start;
+
+					& > label {
+						display: flex; /* necessary to have the '*' in the same row with the help label */
+						align-items: flex-start;
+					}
+				}
+			}
+
+			&.field-checkbox {
+				.field-wrap {
+					display: flex;
+					//margin-top: 0.1rem;
+				}
+			}
+
+			&.width-100 {
+				width: 100%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.hint {
+				//color: #A9A9A9;
+				font-size: 10px;
+				font-style: italic;
+				margin-top: 3px;
+			}
+
+			.flo-section-break {
+				margin-top: var(--data-margin-top);
+				margin-bottom: var(--data-margin-bottom);
+			}
+
+			@media only screen and (min-width: 641px) {
+				&.width-50 {
+					width: 50%;
+				}
+				&.width-33 {
+					width: 33%;
+				}
+			}
+
+			@media only screen and (max-width: 767px) {
+				&.width-25 {
+					width: 50%;
+
+					&.width-25-1,
+					&.width-25-3 {
+						padding-right: calc(var(--data-form-padding-left) / 2);
+					}
+
+					&.width-25-2,
+					&.width-25-4 {
+						// odd element with 50% width
+						padding-left: calc(var(--data-form-padding-right) / 2);
+					}
+				}
+			}
+			@media only screen and (min-width: 768px) {
+				&.width-25 {
+					width: 25%;
+				}
+			}
+
+			&.field-select {
+				select {
+					width: 100%;
+					box-sizing: border-box;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			&.field-checklist {
+				.listbox {
+					display: flex;
+					flex-flow: row wrap;
+				}
+
+				.list-row {
+					margin-right: 25px;
+					margin-bottom: 5px;
+					display: flex;
+
+					label {
+						line-height: 1;
+						margin-bottom: 5px;
+						display: flex;
+						align-items: center;
+					}
+
+					input {
+						margin-bottom: 0;
+						margin-right: 8px !important;
+					}
+				}
+			}
+
+			&.hidden-field {
+				display: none !important;
+			}
+
+			&.field-label {
+				line-height: 1.3;
+
+				i.icon {
+					display: none;
+				}
+			}
+
+			&.field-checkbox {
+				display: flex;
+				flex-direction: row !important;
+				align-items: baseline;
+				position: relative;
+
+				i.icon {
+					display: none;
+				}
+
+				label {
+					order: 2;
+					margin-bottom: 0;
+					line-height: 1.3em;
+					max-width: calc(100% - 1.2em - 16px);
+				}
+
+				.field-wrap {
+					margin-right: 10px;
+					line-height: 1em;
+					order: 1;
+					display: flex;
+
+					input[type="checkbox"] {
+						//height: auto;
+						margin-right: auto;
+						//height: 1em;
+					}
+				}
+
+				.help {
+					a {
+						line-height: 1em;
+						text-decoration: underline;
+					}
+				}
+
+				.errors {
+					width: 100%;
+					order: 3;
+				}
+			}
+
+			&.field-flocaptcha {
+				margin: 0 auto;
+			}
+
+			.wrapper {
+				padding: 0;
+			}
+
+			.g-recaptcha {
+				//border: 1px solid;
+				iframe {
+					border: 1px solid #d3d3d3;
+				}
+
+				&.invalid {
+					iframe {
+						border-color: red;
+					}
+				}
+			}
+		}
+
+		&.topLabel {
+			.form-group {
+				flex-direction: column;
+			}
+		}
+
+		label {
+			margin-bottom: 8px;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		input {
+			margin-bottom: 0;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="number"] {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.radio-list {
+			display: flex;
+			flex-flow: row wrap;
+
+			label {
+				line-height: 1;
+				margin-right: 25px;
+				display: flex;
+				align-items: center;
+			}
+
+			input {
+				margin-bottom: 0;
+				margin-right: 8px !important;
+				position: relative;
+			}
+		}
+
+		.flo-form-data {
+			display: none !important;
+		}
+	}
+
+	input {
+		&[type="text"],
+		&[type="email"],
+		&[type="number"] {
+			height: 3em;
+			line-height: 1.2;
+			padding: 0.5rem;
+		}
+	}
+	select {
+		height: 40px;
+		line-height: 1.2;
+		padding: 0.5em;
+		padding-right: initial;
+	}
+
+	.required-red {
+		color: red;
+	}
+
+	.btn-position {
+		&--left {
+			.field-submit .field-wrap {
+				text-align: left;
+			}
+		}
+
+		&--center {
+			.field-submit .field-wrap {
+				text-align: center;
+			}
+		}
+
+		&--right {
+			.field-submit .field-wrap {
+				text-align: right;
+			}
+		}
+	}
+
+	.field-upload {
+		input[type="file"] {
+			border-width: 0;
+			padding: 0;
+			height: auto;
+			line-height: initial;
+		}
+	}
+
+	.field-submit {
+		.field-wrap {
+			max-width: 100%;
+		}
+
+		input[type="submit"] {
+			max-width: 100%;
+		}
+	}
+
+	.vue-form-generator:not(.ff-pro) .field-submit {
+		input[type="submit"] {
+			background-color: var(--data-btn-bgcolor);
+			color: var(--data-btn-color);
+			padding: 10px 30px;
+		}
+	}
+
+	.ff-pro {
+		.field-submit {
+			input[type="submit"] {
+				background-color: var(--data-btn-bgcolor) !important;
+				color: var(--data-btn-color) !important;
+				border-radius: var(--data-button-border-radius) !important;
+				border: var(--data-button-border-width) solid !important;
+				border-color: var(--data-btn-border-color) !important;
+				padding-top: var(--data-button-padding-y) !important;
+				padding-bottom: var(--data-button-padding-y) !important;
+				padding-left: var(--data-button-padding-x) !important;
+				padding-right: var(--data-button-padding-x) !important;
+				width: var(--data-button-width);
+
+				&:hover {
+					background-color: var(--data-btn-bgcolor-hover) !important;
+					border-color: var(--data-btn-border-color-hover) !important;
+					color: var(--data-btn-color-hover) !important;
+				}
+			}
+		}
+	}
+
+	.help-block {
+		&.errors {
+			color: red;
+			font-size: 12px;
+			position: absolute;
+			bottom: -11px;
+			line-height: 1.2em;
+		}
+	}
+
+	textarea,
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	select {
+		margin-bottom: 0;
+	}
+
+	input[type="email"],
+	input[type="number"],
+	input[type="text"],
+	select {
+		min-height: 2.5em;
+	}
+
+	select {
+		padding-top: initial;
+		padding-bottom: initial;
+		display: block;
+	}
+}

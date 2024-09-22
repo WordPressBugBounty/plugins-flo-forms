@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?hqg0tq');
+  src:  url('fonts/icomoon.eot?hqg0tq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hqg0tq') format('truetype'),
+    url('fonts/icomoon.woff?hqg0tq') format('woff'),
+    url('fonts/icomoon.svg?hqg0tq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Filed_Settings_Active .path1:before {
+  content: "\e928";
+  color: rgb(0, 0, 0);
+}
+.icon-Filed_Settings_Active .path2:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-Filed_Settings_Active .path3:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(236, 97, 66);
+}
+.icon-Filed_Settings_Inactive:before {
+  content: "\e927";
+  color: #c6c6c6;
+}
+.icon-play:before {
+  content: "\e900";
+}
+.icon-Add---Remove:before {
+  content: "\e901";
+  color: #ababab;
+}
+.icon-Add:before {
+  content: "\e902";
+  color: #ababab;
+}
+.icon-Form_Settings_Inactive:before {
+  content: "\e903";
+  color: #ababab;
+}
+.icon-Backup:before {
+  content: "\e904";
+  color: #ababab;
+}
+.icon-flo-calendar:before {
+  content: "\e905";
+  color: #ababab;
+}
+.icon-Checklist:before {
+  content: "\e906";
+  color: #ababab;
+}
+.icon-Checkbox:before {
+  content: "\e907";
+  color: #ababab;
+}
+.icon-Close:before {
+  content: "\e908";
+  color: #ababab;
+}
+.icon-Link .path1:before {
+  content: "\e909";
+  color: rgb(233, 233, 233);
+}
+.icon-Link .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(236, 97, 66);
+}
+.icon-Copy:before {
+  content: "\e90b";
+  color: #ababab;
+}
+.icon-Demo:before {
+  content: "\e90c";
+  color: #ababab;
+}
+.icon-Dropdown:before {
+  content: "\e90d";
+  color: #ababab;
+}
+.icon-Email:before {
+  content: "\e90e";
+  color: #ababab;
+}
+.icon-Error:before {
+  content: "\e90f";
+  color: #ababab;
+}
+.icon-Filed_Settings_Active_no-good .path1:before {
+  content: "\e910";
+  color: rgb(42, 42, 42);
+}
+.icon-Filed_Settings_Active_no-good .path2:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(236, 97, 66);
+}
+.icon-Single_Line_Text-2:before {
+  content: "\e912";
+  color: #ababab;
+}
+.icon-2:before {
+  content: "\e913";
+  color: #ababab;
+}
+.icon-Hidden:before {
+  content: "\e914";
+  color: #ababab;
+}
+.icon-Info:before {
+  content: "\e915";
+  color: #ababab;
+}
+.icon-Move-Field:before {
+  content: "\e916";
+  color: #ababab;
+}
+.icon-Number:before {
+  content: "\e917";
+  color: #ababab;
+}
+.icon-Paragraph_Text:before {
+  content: "\e918";
+  color: #ababab;
+}
+.icon-Single_Line_Text:before {
+  content: "\e919";
+  color: #ababab;
+}
+.icon-Percents:before {
+  content: "\e91a";
+  color: #ababab;
+}
+.icon-Combined-Shape:before {
+  content: "\e91b";
+  color: #ababab;
+}
+.icon-Question:before {
+  content: "\e91c";
+}
+.icon-Radio-Button:before {
+  content: "\e91d";
+  color: #ababab;
+}
+.icon-Restart:before {
+  content: "\e91e";
+  color: #ababab;
+}
+.icon-Search:before {
+  content: "\e91f";
+  color: #ababab;
+}
+.icon-Separator:before {
+  content: "\e920";
+  color: #ababab;
+}
+.icon-Share:before {
+  content: "\e921";
+  color: #ababab;
+}
+.icon-1:before {
+  content: "\e922";
+  color: #ababab;
+}
+.icon-Sync:before {
+  content: "\e923";
+  color: #ababab;
+}
+.icon-Trash:before {
+  content: "\e924";
+  color: #ababab;
+}
+.icon-User:before {
+  content: "\e925";
+  color: #ababab;
+}
+.icon-Validation:before {
+  content: "\e926";
+  color: #ababab;
+}
+.icon-flo-ctrl:before {
+  content: "\ea50";
+}
