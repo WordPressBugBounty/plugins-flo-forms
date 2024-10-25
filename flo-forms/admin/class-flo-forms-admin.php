@@ -1026,6 +1026,9 @@ if(!class_exists('Flo_Forms_Admin')){
     public function ff_email_issues_notice() {
       if(get_option('ff-email-issue-notice'))
           return;
+
+			// generate the nonce
+			$nonce = wp_create_nonce('dismiss_email_issues_notice');
       ?>
       <div class="notice notice-error ff-email-issue-notice" style="position: relative;">
         <h3 style="color: red">
@@ -1033,7 +1036,7 @@ if(!class_exists('Flo_Forms_Admin')){
           <?php _e('Important Flo Forms Notice To Avoid Missing Contact Form Inquiries.') ?>
         </h3>
 
-        <a class="ff-emails-message-close notice-dismiss" style="display: flex; text-decoration: none;" href="<?php echo admin_url('?dismiss_ff_email_notice=1') ?>">
+        <a class="ff-emails-message-close notice-dismiss" style="display: flex; text-decoration: none;" href="<?php echo admin_url('?dismiss_ff_email_notice=1&nonce=' . $nonce) ?>">
           <?php _e('Dismiss','flo-forms'); ?>
         </a>
 
@@ -1055,7 +1058,15 @@ if(!class_exists('Flo_Forms_Admin')){
 
     public function ff_dismiss_email_issues_notice() {
       //delete_option('ff-email-issue-notice');
-      if(isset($_GET['dismiss_ff_email_notice']) && $_GET['dismiss_ff_email_notice'] == 1 ) {
+			if(isset($_GET['dismiss_ff_email_notice']) && $_GET['dismiss_ff_email_notice'] == 1 ) {
+				if ( ! isset( $_GET['nonce'] ) || ! wp_verify_nonce( $_GET['nonce'], 'dismiss_email_issues_notice' ) ) {
+					wp_die( 'Invalid nonce.' );
+				}
+
+				if( !current_user_can( 'edit_posts' ) ){
+					die('busted!');
+				}
+
         update_option('ff-email-issue-notice', 'dismissed');
       }
     }

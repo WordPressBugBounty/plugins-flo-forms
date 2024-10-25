@@ -3,8 +3,8 @@ Contributors: wpmigo,flothemesplugins
 Donate link: https://flothemes.com/donation/
 Tags: contact form, contact form plugin, form, custom form builder, submission form, conditional logic
 Requires at least: 5.0.0
-Tested up to: 6.5
-Stable tag: 1.0.42
+Tested up to: 6.6.2
+Stable tag: 1.0.43
 Author: Flothemes
 Author URI: https://flothemes.com/
 License: GPLv2 or later
@@ -50,6 +50,9 @@ If the problem persists, check the console and see if there are any Javascript e
 
 
 == Changelog ==
+
+= 1.0.43 =
+* Added nonce for the notice box dismissal button. =
 
 = 1.0.42 =
 * Added nonce & capability verification for test emails. =
